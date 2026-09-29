@@ -1,206 +1,25 @@
 # ksweb
 
-[![Build Status](https://travis-ci.org/puria/ksweb.svg?branch=master)](https://travis-ci.org/puria/ksweb)
-[![Coverage Status](https://coveralls.io/repos/github/puria/ksweb/badge.svg?branch=master)](https://coveralls.io/github/puria/ksweb?branch=master)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpuria%2Fksweb.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpuria%2Fksweb?ref=badge_shield)
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+本仓库是「ksweb」的安卓版本获取入口，附使用资料索引。
 
-The **KS** (Knowledge Shaper) is a [Document Automation](https://en.wikipedia.org/wiki/Document_automation) digital product that enables the shaping and reuse of Knowledge Bases. Our effort is to allow and facilitate the creation of wizards that easily outputs documents just by answering to simple questions with an extra effort to a functiona design and UX.
+## 安装文件资源（夸克网盘）
 
-You can try the demo online available on [ks.studiolegale.it](http://ks.studiolegale.it).
-Some example of Knowledge Bases are:
- 
- * [Memorandum on GDPR compliance](https://github.com/marco55555/Memorandum-GDPR)
- * [Lawyer quotation (in italian)](https://github.com/marco55555/preventivo_avvocato)
+> **ksweb 安装文件资源（夸克网盘）**：[https://pan.quark.cn/s/e6a01d3e1a7d](https://pan.quark.cn/s/e6a01d3e1a7d)
 
-<details>
- <summary><strong>:triangular_flag_on_post: Table of Contents</strong> (click to expand)</summary>
+## 官方项目
 
-* [Getting started](#whale-getting-started)
-* [Manual Installation](#floppy_disk-manual-installation-for-advanced-users)
-* [Usage](#video_game-usage)
-* [Configuration](#wrench-configuration)
-* [I18n](#globe_with_meridians-I18n)
-* [Notes](#memo-notes)
-* [Troubleshooting & debugging](#bug-troubleshooting--debugging)
-* [Acknowledgements](#heart_eyes-acknowledgements)
-* [Contributing](#busts_in_silhouette-contributing)
-* [License](#briefcase-license)
-</details>
+- 上游项目：[puria/ksweb](https://github.com/puria/ksweb)
 
-## :whale: Getting started
+## 更多资料
 
-The easiest way to run ksweb is inside a docker container. just run
+- [下载与安装教程](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/ksweb/%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.md)
+- [WordPress博客搭建步骤](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/ksweb/WordPress%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4.md)
+- [phpMyAdmin与数据库管理](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/ksweb/phpMyAdmin%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86.md)
+- [外网访问与内网穿透](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/ksweb/%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE%E4%B8%8E%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F.md)
+- [常见问题与故障排查](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/ksweb/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5.md)
+- [手机搭建网站教程](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/ksweb/%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99%E6%95%99%E7%A8%8B.md)
+- [全部软件目录](https://github.com/alipymanbu/Android/blob/master/%E5%85%A8%E9%83%A8%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95.md)
 
-    git clone --recursive https://github.com/puria/ksweb.git
-	cd ksweb
-    docker-compose up
+---
 
-For instructions about how to install `docker-compose` please refere to the 
-[official documentation](https://docs.docker.com/compose/install/) 
-
-## :floppy_disk: Manual Installation (for advanced users)
-
-Checkout the project
-
-    git clone --recursive https://github.com/puria/ksweb.git
-
-### Pre-requisites
-Before install KSweb you need to have an instance of **[:leaves:mongodb](https://www.mongodb.com/download-center/community)** up and running, the **python development headers** and **python3-virtualenv** packages
-*NB* you need `python3 >= 3.6` and `pip >= 18.1`
-
-You also need to have to install [pandoc](https://pandoc.org/) for exporting the actual output to different formats.
-
-### Installer
-run the installer:
-
-:apple: macosx
-
-    brew install python3
-    cd ksweb
-    ./install
-
-:penguin: debian derivatives
-
-    apt install python3-dev python3-virtualenv
-    cd ksweb
-    ./install
-
-### Manual installation
-
-[![asciicast](https://asciinema.org/a/yImfeZTmmoGWvXV93k3g0OtaO.png)](https://asciinema.org/a/yImfeZTmmoGWvXV93k3g0OtaO)
-
-
-Install ``ksweb`` using the setup.py script
-
-```bash
-    # Enter into the first project folder
-    $ cd ksweb
-    
-    # Create a virtual environment for python2 (important)
-    $ virtualenv -p python2 venv
-    
-    # Activate your virtual environment (very important)
-    $ source venv/bin/activate
-    
-    # Enter the subproject folder
-    $ cd ksweb
-    
-    # Install all the dependencies
-    $ pip install -e .
-    
-    # Populate the mandatory data (TO RUN JUST AT THE FIRST USAGE OF A DATABASE)
-    $ gearbox setup-app
-```
-
-Start the http server
-
-```bash
- # Start a local webserver (NOT SUITABLE FOR PRODUCTION) 
- $ gearbox serve --reload
-```
-
-Then you are ready to go :tada:
-
-***
-## :video_game: Usage
-
-To run the webapp activate your virtualenv and run the server:
-
-    cd ksweb
-    source venv/bin/activate
-    gearbox serve
-
-and head your browser to `http://localhost:8080`
-
-
-Default accounts (username - password):
-
-  Administrator: admin :key: adminks
-  
-  Lawyer: lawyer :key: lawyerks
-  
-  User: user :key: userks
-
-***
-## :wrench: Configuration
-
-The conf files are `development.ini` and `test.ini`.
-
-The most effective way is to edit the file and tweak stuff. Salient info are reported below.
-
-### :leaves: MongoDB 
-
-The url of the database connection is `ming.url` find it in `development.ini` and change it per your needs.
-
-***
-
-## :globe_with_meridians: I18n
-
-The UI of the knowledge shaper is already translated in English and Italian.
-If you need othe languages, please indicate us someone who wants to help, and
-open and issue.
-The extensive documentation about how the translation works is available on 
-[this section](https://turbogears.readthedocs.io/en/latest/turbogears/i18n.html)
-of the Turbogears official site.
-
-In briefe allows to:
-
-  * Create a new language (also called `Catalog`)
-  * Extract the strings from the software
-  * Update and Compile existing language/catalog
-
-The catalogs are simple `.po` files that anyone can open with a translation
-software (eg. [Poedit](https://poedit.net/))
-
-
-***
-## :memo: Notes
-
-***
-## :bug: Troubleshooting & debugging
-
-To run the app in debug mode launch the server with the following flags
-
-    gearbox serve --debug --reload
-
-
-***
-## :heart_eyes: Acknowledgements
-
-Copyright (C) 2018 by StudioLegale.it <http://studiolegale.it>
-
-Designed, written by AXANT.it and currently maintained by Puria Nafisi Azizi.
-
-***
-## :busts_in_silhouette: Contributing
-
-1. [FORK IT](https://github.com/puria/ksweb/fork)
-1. Create your feature branch `git checkout -b feature/branch`
-1. Commit your changes `git commit -am 'Add some fooBar'`
-1. Push to the branch `git push origin feature/branch`
-1. Create a new Pull Request
-1. Thank you
-
-***
-## :briefcase: License
-
-    Knowledge Shaper, Collaborative knowledge tools editor
-    Copyright (c) 2017-TODAY StudioLegale.it <http://studiolegale.it>
-                             AXANT.it <http://axant.it>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License as
-    published by the Free Software Foundation, either version 3 of the
-    License, or (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpuria%2Fksweb.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpuria%2Fksweb?ref=badge_large)
-
+> 本仓库由上游项目 fork 而来，原始说明见[上游仓库](https://github.com/puria/ksweb)。
